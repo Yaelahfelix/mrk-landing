@@ -1,26 +1,119 @@
 @import "tailwindcss";
 
+/* ============================================================
+   MRK — Tema Biru Dongker (Dark Navy)
+   ============================================================ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #050814;
+  --background-2: #0a1024;
+  --surface: #0e1530;
+  --surface-2: #131c44;
+  --border: #1e2a5a;
+  --foreground: #eaf0ff;
+  --muted: #9fb0d8;
+
+  --brand-300: #93c5fd;
+  --brand-400: #60a5fa;
+  --brand-500: #3b82f6;
+  --brand-600: #2563eb;
+  --brand-700: #1d4ed8;
+  --accent: #38bdf8;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-background-2: var(--background-2);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-border: var(--border);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-accent: var(--accent);
+
+  --font-sans: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-marquee: marquee 32s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 5s ease-in-out infinite;
+  --animate-spin-slow: spin 28s linear infinite;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.8; transform: scale(1.08); }
+}
+
+* {
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Background dekoratif global */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, rgba(96, 165, 250, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(96, 165, 250, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.glass {
+  background: rgba(19, 28, 68, 0.5);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(96, 165, 250, 0.14);
+}
+
+.text-gradient {
+  background: linear-gradient(120deg, var(--brand-300), var(--accent) 60%, #c4b5fd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.glow {
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.2),
+    0 18px 60px -18px rgba(37, 99, 235, 0.55);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--background-2); }
+::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 9999px;
+  border: 2px solid var(--background-2);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--brand-600); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
