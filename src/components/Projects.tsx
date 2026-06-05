@@ -5,10 +5,10 @@ import { Stagger, StaggerItem } from "./animations";
 import type { Project } from "@/lib/types";
 
 const gradients = [
-  "from-brand-600/40 to-accent/30",
-  "from-indigo-600/40 to-brand-500/30",
-  "from-sky-600/40 to-cyan-400/30",
-  "from-violet-600/40 to-brand-500/30",
+  "from-brand-600/50 to-brand-400/20",
+  "from-surface-2 to-brand-500/40",
+  "from-brand-700/60 to-brand-300/10",
+  "from-surface to-brand-600/50",
 ];
 
 export function Projects({ projects }: { projects: Project[] }) {

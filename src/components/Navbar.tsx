@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
+import { MrkIcon } from "./icons";
 import type { Settings } from "@/lib/types";
 
 export function Navbar({ settings }: { settings: Settings }) {
@@ -29,14 +30,16 @@ export function Navbar({ settings }: { settings: Settings }) {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
-        <a href="#beranda" className="flex items-center gap-2.5">
-          <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-brand-500 to-accent font-bold text-white shadow-lg shadow-brand-600/40">
-            {brand.slice(0, 1)}
-          </span>
-          <span className="text-lg font-bold tracking-tight">
-            {brand}
-            <span className="text-brand-400">.</span>
-          </span>
+        <a href="#beranda" className="flex items-center gap-3">
+          <MrkIcon className="h-9 w-9 shrink-0" />
+          <div className="leading-none">
+            <span className="block text-xl font-bold tracking-[0.2em] text-foreground">
+              {brand}
+            </span>
+            <span className="block text-[9px] font-semibold tracking-[5px] text-brand-500 uppercase">
+              IT SOLUTION
+            </span>
+          </div>
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">

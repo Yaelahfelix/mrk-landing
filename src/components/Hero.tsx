@@ -31,7 +31,7 @@ export function Hero({ data }: { data: HeroType }) {
       <div className="pointer-events-none absolute inset-0 -z-10">
         <div className="absolute -left-40 top-10 h-[36rem] w-[36rem] rounded-full bg-brand-600/25 blur-[130px] animate-pulse-slow" />
         <div className="absolute -right-32 bottom-0 h-[32rem] w-[32rem] rounded-full bg-accent/20 blur-[120px] animate-pulse-slow" />
-        <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-indigo-500/15 blur-[100px]" />
+        <div className="absolute left-1/2 top-1/3 h-72 w-72 -translate-x-1/2 rounded-full bg-brand-700/20 blur-[100px]" />
       </div>
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background to-transparent" />
 

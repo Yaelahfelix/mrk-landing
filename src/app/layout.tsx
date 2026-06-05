@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 
 import { sanityFetch } from "@/sanity/lib/fetch";
@@ -7,7 +7,7 @@ import { settingsQuery } from "@/sanity/lib/queries";
 import { fallbackSettings } from "@/lib/fallback";
 import type { Settings } from "@/lib/types";
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({
   variable: "--font-sans",
   subsets: ["latin"],
   display: "swap",
@@ -53,7 +53,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="id" className={`${jakarta.variable} antialiased`}>
+    <html lang="id" className={`${inter.variable} antialiased`}>
       <body>{children}</body>
     </html>
   );

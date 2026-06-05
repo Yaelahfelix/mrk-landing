@@ -14,6 +14,22 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+export function MrkIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 40 40" className={className} fill="none" aria-hidden>
+      <rect width="40" height="40" rx="9" fill="#0F1C35" />
+      {/* Left pillar */}
+      <rect x="3" y="6" width="8" height="28" rx="4" fill="white" />
+      {/* Right pillar */}
+      <rect x="29" y="6" width="8" height="28" rx="4" fill="white" />
+      {/* Diamond outer */}
+      <path d="M20 10L30 20L20 30L10 20Z" fill="#D4A017" />
+      {/* Diamond inner cutout */}
+      <path d="M20 16L24 20L20 24L16 20Z" fill="#0F1C35" />
+    </svg>
+  );
+}
+
 const serviceIcons: Record<string, LucideIcon> = {
   globe: Globe,
   smartphone: Smartphone,
