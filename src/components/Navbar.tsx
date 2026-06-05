@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ArrowRight } from "lucide-react";
 import { MrkIcon } from "./icons";
+import { NAV_LINKS } from "@/lib/fallback";
 import type { Settings } from "@/lib/types";
 
 export function Navbar({ settings }: { settings: Settings }) {
@@ -17,7 +18,6 @@ export function Navbar({ settings }: { settings: Settings }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const links = settings.navLinks ?? [];
   const brand = settings.shortName || "MRK";
 
   return (
@@ -43,7 +43,7 @@ export function Navbar({ settings }: { settings: Settings }) {
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
-          {links.map((l) => (
+          {NAV_LINKS.map((l) => (
             <li key={l.href}>
               <a
                 href={l.href}
@@ -83,7 +83,7 @@ export function Navbar({ settings }: { settings: Settings }) {
             className="overflow-hidden border-t border-border glass lg:hidden"
           >
             <ul className="space-y-1 px-5 py-4">
-              {links.map((l) => (
+              {NAV_LINKS.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}

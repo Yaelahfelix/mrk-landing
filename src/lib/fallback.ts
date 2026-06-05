@@ -1,5 +1,14 @@
 import type { HomeData, Settings } from "./types";
 
+export const NAV_LINKS = [
+  { label: "Layanan", href: "#layanan" },
+  { label: "Proyek", href: "#proyek" },
+  { label: "Proses", href: "#proses" },
+  { label: "Testimoni", href: "#testimoni" },
+  { label: "Tim", href: "#tim" },
+  { label: "FAQ", href: "#faq" },
+] as const;
+
 /**
  * Konten default. Dipakai saat Sanity belum dikonfigurasi / belum ada konten,
  * sehingga landing page tetap tampil lengkap dan rapi.
@@ -9,14 +18,7 @@ export const fallbackSettings: Settings = {
   companyName: "PT Maulida Rafa Kurnia",
   shortName: "MRK",
   tagline: "Agensi IT — Solusi Digital untuk Bisnis Anda",
-  navLinks: [
-    { label: "Layanan", href: "#layanan" },
-    { label: "Proyek", href: "#proyek" },
-    { label: "Proses", href: "#proses" },
-    { label: "Testimoni", href: "#testimoni" },
-    { label: "Tim", href: "#tim" },
-    { label: "FAQ", href: "#faq" },
-  ],
+  navLinks: [...NAV_LINKS],
   contact: {
     email: "halo@mrksolution.id",
     phone: "+62 812-3456-7890",

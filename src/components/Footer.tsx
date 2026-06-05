@@ -1,4 +1,5 @@
 import { SocialIcon, MrkIcon } from "./icons";
+import { NAV_LINKS } from "@/lib/fallback";
 import type { Settings } from "@/lib/types";
 
 export function Footer({ settings }: { settings: Settings }) {
@@ -50,7 +51,7 @@ export function Footer({ settings }: { settings: Settings }) {
               Navigasi
             </h4>
             <ul className="mt-4 space-y-2.5">
-              {(settings.navLinks ?? []).map((l) => (
+              {NAV_LINKS.map((l) => (
                 <li key={l.href}>
                   <a
                     href={l.href}
