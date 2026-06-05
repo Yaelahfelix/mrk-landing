@@ -17,8 +17,6 @@ export const NAV_LINKS = [
 export const fallbackSettings: Settings = {
   companyName: "PT Maulida Rafa Kurnia",
   shortName: "MRK",
-  tagline: "Agensi IT — Solusi Digital untuk Bisnis Anda",
-  navLinks: [...NAV_LINKS],
   contact: {
     email: "halo@mrksolution.id",
     phone: "+62 812-3456-7890",

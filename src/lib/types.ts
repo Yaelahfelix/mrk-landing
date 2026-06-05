@@ -9,9 +9,6 @@ export type CTA = { label?: string; href?: string };
 export type Settings = {
   companyName?: string;
   shortName?: string;
-  tagline?: string;
-  logo?: SanityImage;
-  navLinks?: { label: string; href: string }[];
   contact?: {
     email?: string;
     phone?: string;
@@ -21,11 +18,6 @@ export type Settings = {
   };
   socials?: { platform: string; url: string }[];
   footerNote?: string;
-  seo?: {
-    metaTitle?: string;
-    metaDescription?: string;
-    ogImage?: SanityImage;
-  };
 };
 
 export type Hero = {

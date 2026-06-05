@@ -9,13 +9,9 @@ const imageFields = `
 export const settingsQuery = groq`*[_type == "siteSettings"][0]{
   companyName,
   shortName,
-  tagline,
-  "logo": logo{${imageFields}},
-  navLinks[]{ label, href },
   contact{ email, phone, whatsapp, address, mapUrl },
   socials[]{ platform, url },
-  footerNote,
-  seo{ metaTitle, metaDescription, "ogImage": ogImage{${imageFields}} }
+  footerNote
 }`;
 
 export const homeQuery = groq`{

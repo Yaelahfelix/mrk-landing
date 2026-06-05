@@ -38,7 +38,6 @@ export default async function HomePage() {
   const settings: Settings = {
     ...fallbackSettings,
     ...(settingsRaw ?? {}),
-    navLinks: pick(settingsRaw?.navLinks, fallbackSettings.navLinks!),
     contact: { ...fallbackSettings.contact, ...(settingsRaw?.contact ?? {}) },
     socials: pick(settingsRaw?.socials, fallbackSettings.socials!),
   };
