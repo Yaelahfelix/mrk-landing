@@ -99,20 +99,23 @@ export default function OgImage() {
 
         {/* Main headline */}
         <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
-          <h1
+          <div
             style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 0,
               color: "#FFFFFF",
               fontSize: 60,
               fontWeight: 800,
-              lineHeight: 1.1,
-              margin: 0,
-              maxWidth: 800,
+              lineHeight: 1.15,
             }}
           >
-            Wujudkan{" "}
-            <span style={{ color: "#D4A017" }}>Transformasi Digital</span>{" "}
-            Bisnis Anda
-          </h1>
+            <span>
+              Wujudkan{" "}
+              <span style={{ color: "#D4A017" }}>Transformasi Digital</span>
+            </span>
+            <span>Bisnis Anda</span>
+          </div>
           <p
             style={{
               color: "#8fa3c0",
